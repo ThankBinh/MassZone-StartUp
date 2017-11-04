@@ -1,0 +1,93 @@
+﻿@model IEnumerable<MassZone_API.Models.Post>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Categories.cateName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Users.userName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.postType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.postTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.featureImg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.content)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.voteEndTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.voteNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.voteRequire)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.votePrice)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Categories.cateName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Users.userName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.postType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.postTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.featureImg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.content)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.voteEndTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.voteNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.voteRequire)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.votePrice)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.postId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.postId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.postId })
+        </td>
+    </tr>
+}
+
+</table>

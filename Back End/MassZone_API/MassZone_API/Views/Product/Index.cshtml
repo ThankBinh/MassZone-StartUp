@@ -1,0 +1,63 @@
+﻿@model IEnumerable<MassZone_API.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Categories.cateName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Posts.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.proName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.proImg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Categories.cateName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Posts.title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.proName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.proImg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.proId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.proId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.proId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,58 @@
+﻿@model MassZone_API.Models.CheckOut
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CheckOut</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Products.proName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Products.proName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Users.userName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Users.userName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ckTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ckTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ckId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

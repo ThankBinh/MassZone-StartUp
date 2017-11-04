@@ -1,0 +1,50 @@
+﻿@model MassZone_API.Models.Comment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Comment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Posts.title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Posts.title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Products.proName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Products.proName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Users.userName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Users.userName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.content)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.content)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.cmtId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

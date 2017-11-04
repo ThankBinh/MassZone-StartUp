@@ -1,0 +1,112 @@
+﻿@model MassZone_API.Models.Post
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Post</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Categories.cateName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categories.cateName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Users.userName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Users.userName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.postType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.postType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.postTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.postTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.featureImg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.featureImg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.content)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.content)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.voteEndTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.voteEndTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.voteNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.voteNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.voteRequire)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.voteRequire)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.votePrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.votePrice)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
